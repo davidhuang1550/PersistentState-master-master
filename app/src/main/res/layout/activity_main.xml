@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.marek.persistentstate.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student ID:"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentID"
+        android:hint="Student Id"
+        android:text=""
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Grade"
+        android:id="@+id/TextView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/studentGrade" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentGrade"
+        android:hint="Grade"
+        android:text=""
+        android:layout_alignTop="@+id/studentID"
+        android:layout_toEndOf="@+id/studentID"
+        android:layout_marginStart="68dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Grade"
+        android:id="@+id/gradeButton"
+        android:layout_below="@+id/TextView2"
+        android:layout_toEndOf="@+id/TextView2" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:scrollbars="none"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_below="@+id/gradeButton"
+        android:layout_toStartOf="@+id/TextView2"
+        android:layout_alignEnd="@+id/gradeButton" />
+</RelativeLayout>
